@@ -1,0 +1,295 @@
+/*!
+ * Theme Name: Blank Theme Starter
+ * Description: A light-weight starter template for custom Wordpress theme development. 
+ * Version: 1.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * This theme, like WordPress, is licensed under the GPL.
+   Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Variables */
+
+$color-1: rgb(206, 20, 20);
+$color-2: rgb(58, 58, 58);
+$color-3: rgb(167, 167, 167);
+
+$primary-font: 'Oswald', sans-serif;
+
+/* Mixins */
+
+@mixin xl-screen {
+    @media (min-width: 1280px) { @content; }
+}
+
+@mixin lg-screen {
+    @media (min-width: 992px) { @content; }
+}
+
+@mixin md-screen {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin sm-screen{
+    @media (min-width: 576px) { @content; }
+}
+
+/* Imports */
+
+@import "bootstrap-grid";
+@import "additional-styles";
+
+/* Basic Styles */
+
+:root{
+    font-size: 22px;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+    font-family: $primary-font;
+    font-weight: 200;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    &.no-scroll{
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    line-height: 1em;
+    margin: 0px 0px 1rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+    margin: 0px 0px 1rem;
+    line-height: 1.7em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    -webkit-appearance: button;
+    cursor: pointer;
+    border: none;
+}
+
+input[type=text] {
+    padding: 10px;
+}
+
+textarea::placeholder{
+    color: lightgrey;
+}
+
+button:focus, input:focus, select:focus{
+    outline: none;
+}
+ 
+input::placeholder{
+    color: lightgrey;
+}
+
+textarea{
+    padding: 10px;
+    overflow: scroll;
+    height: 150px;
+    width: 100%;
+}
+
+/* Helpful Styles */
+
+.hero{
+	position: relative;
+	min-height: 90vh;
+}
+
+.full-bg{
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.z-index-1{
+    z-index: 1;
+}
+
+.white-bg{
+    background-color: #fff;
+}
+
+/* Responsive Videos */
+.vid-wrap{
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+
+    iframe{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+header{
+    height: 10vh;
+}
+
+.navigation-menu{
+    display: none;
+    @include lg-screen {
+        display: block;
+    }
+    .menu{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        .menu-item{
+            margin: 0px 15px;
+            display: inline-block;
+            a{
+                color: $color-3;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.mobile-nav{
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-2;
+    transform: translateX(-100vw);
+    transition: all 450ms ease-in-out;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    &.open{
+        transform: translateX(0px);
+    }
+    .menu{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        .menu-item{
+            margin: 15px 0px;
+            a{
+                color: #fff;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+#burger-nav {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    z-index: 999;
+    @include lg-screen{
+        display: none;
+    }
+    &.open{
+        span{
+            background-color: #fff;
+        }
+    }
+    span{
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: $color-2;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+}
+
+#burger-nav span:nth-child(1) {
+    top: 0px;
+}
+
+#burger-nav span:nth-child(2),#burger-nav span:nth-child(3) {
+    top: 10px;
+}
+
+#burger-nav span:nth-child(4) {
+    top: 20px;
+}
+
+#burger-nav.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#burger-nav.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+#burger-nav.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+#burger-nav.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
