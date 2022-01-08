@@ -8,13 +8,17 @@
    Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+@font-face {
+    font-family: glacial-indifference;
+    src: url(../../src/glacial-indifference/GlacialIndifference-Regular.otf) format("opentype");;
+}
 /* Variables */
-
+@import 'video-page';
 $color-1: rgb(206, 20, 20);
 $color-2: rgb(58, 58, 58);
 $color-3: rgb(167, 167, 167);
 
-$primary-font: 'Oswald', sans-serif;
+$primary-font: 'glacial-indifference';
 
 /* Mixins */
 
@@ -146,7 +150,7 @@ textarea{
 
 .full-bg{
     background-size: cover;
-    background-position: center;
+    background-position: left;
 }
 
 .overlay{
