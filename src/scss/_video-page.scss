@@ -1,12 +1,58 @@
-#video-template{
-    
-    video{
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-    }
-    
-    
+@mixin xl-screen {
+    @media (min-width: 1280px) { @content; }
 }
+
+@mixin lg-screen {
+    @media (min-width: 992px) { @content; }
+}
+
+@mixin md-screen {
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin sm-screen{
+    @media (min-width: 576px) { @content; }
+}
+
+#video-template{
+    .video-container{
+        height:70vh;
+        background-size:cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        video{
+            display:none;
+        }
+        .h1-container{
+            text-align: center;
+            h1{
+              
+            }
+        } 
+ 
+                
+
+        @include md-screen{
+            .video-container{
+                background-image:none
+            video{
+                display:block;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 80vh;
+                height: 75vh;
+                object-fit: cover;
+            }
+            .h1-container{
+                position: absolute;
+                background-color:red;
+                bottom:50px;
+            }
+        }
+        }
+    }
+
