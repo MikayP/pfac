@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<header class="d-flex align-items-center container-fluid">
+<header class="d-flex align-items-center container-fluid desktop-nav">
     <div class="container">
         <div class="row justify-content-between align-items-center">
-            <a href="/">
-                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo" style="max-width: 150px;">
+            <a class="image-container center-txt" href="/">
+                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo">
             </a>
             <nav class="navigation-menu">
                 <?php $args = [ 'theme_location' => 'primary' ];

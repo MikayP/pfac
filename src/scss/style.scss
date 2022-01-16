@@ -186,42 +186,76 @@ textarea{
         height: 100%;
     }
 }
+$menu_transition: .4s;
+.desktop-nav{
+    padding-top:1em;
+    position:fixed;
+    color:red;
+    transition:$menu_transition;
+ 
+    .image-container{
+       width:125px;
+        transition:$menu_transition;
+        img{
+            width:125px;
+            transition:$menu_transition;
+        }
+     }
 
-.navigation-menu{
-    display: none;
-    @include lg-screen {
-        display: block;
-    }
-    .menu{
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-        ul{
-            display:flex;
-            padding:3px;
-            li{
-                list-style:none;
-                a{
-                    padding:5px;
-                    margin:0 1em;
-                    color: #fff;
-                    transition: all ease-in-out .3s;
-                    &:hover{
-                        color:grey;
+    .navigation-menu{
+        display: none;
+        @include lg-screen {
+            display: block;
+        }
+        .menu{
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            ul{
+                display:flex;
+                padding:3px;
+                margin: 10px 0;
+                li{
+                    list-style:none;
+                    a{
+                        padding:5px;
+                        margin:0 1em;
+                        color: #fff;
+                        font-size:18px;
+                        transition: .3s;
+                        &:hover{
+                            color:grey;
+                        }
                     }
                 }
             }
-        }
-        .menu-item{
-            margin: 0px 15px;
-            display: inline-block;
-            a{
-                color: $color-3;
-                font-weight: 400;
+            .menu-item{
+                margin: 0px 15px;
+                display: inline-block;
+                a{
+                    color: $color-3;
+                    font-weight: 400;
+                }
             }
         }
+    
     }
+    &.header_expand{
+        background-color:rgb(92, 92, 92);
+        padding-top:0em;
+        .image-container{
+            img{
+                width:95px;
+             }
+        }
+ 
+        .font_expand{
+            a{ 
+                // font-size:35px !important;
+            }
 
+        }
+    }
 }
 
 .mobile-nav{
