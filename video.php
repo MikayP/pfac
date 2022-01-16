@@ -7,13 +7,13 @@
 <?php get_header();
 
 $video_file = get_field('video_file_url');
-$sub_header = get_field('sub_header');
+$sub_header = get_field('subheading');
 
 ?>
 
-<div id="video-template">
+<div class="video-template">
 	<div class="video-container" style="background-image:url('https://source.unsplash.com/user/c_v_r/600x300')">
-		<video autoplay controls muted>
+		<video autoplay loop muted>
 			<source src="<?php echo $video_file; ?>" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
@@ -21,6 +21,9 @@ $sub_header = get_field('sub_header');
             <h1 class=""><?php the_title(); ?></h1>
             <?php if($sub_header) ?><h2><?php if($sub_header) {echo $sub_header; ?></h2><?php } ?>
         </div>
+        </div>
+        <div class="video-template-content col-md-10 mx-auto">
+
 		<?php
     $args = array(
         'post_type' => 'post'
@@ -32,13 +35,24 @@ $sub_header = get_field('sub_header');
         while($post_query->have_posts() ) {
             $post_query->the_post();
             ?>
-            <h2><?php the_title(); ?></h2>
-            <?php
-            }
+            <a class="center-txt" href="<?php echo get_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+            <?php  
         }
+        
+        }
+
+
+        if(have_posts()) while (have_posts() ) : the_post();
+
+            the_content();
+        
+        endwhile;
 ?>
+
+            
+
 	</div>
-	<p><?php the_content(); ?></p>
+
 
 
 </div>

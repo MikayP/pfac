@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); $uploads = wp_upload_dir();  ?>>
  
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <a href="/">
-                <img src="/wp-content/themes/BlankStarter/images/placeholder.com-logo1 (1).png" alt="logo" style="max-width: 150px;">
+                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo" style="max-width: 150px;">
             </a>
             <nav class="navigation-menu">
                 <?php $args = [ 'theme_location' => 'primary' ];

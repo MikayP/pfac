@@ -5,17 +5,21 @@
  * Version: 1.0
 */
  
-@font-face {
-    font-family: glacial-indifference;
-    src: url(../../src/glacial-indifference/GlacialIndifference-Regular.otf) format("opentype");;
-}
 /* Variables */
-@import 'video-page';
+
 $color-1: rgb(206, 20, 20);
 $color-2: rgb(58, 58, 58);
 $color-3: rgb(167, 167, 167);
+$border-radius: 8px;
+$primary-font: 'glacial-indifference', serif;
 
-$primary-font: 'glacial-indifference';
+@import "video-page";
+
+@font-face {
+    font-family: glacial-indifference;
+    src: url('././src/glacial-indifference/GlacialIndifference-Regular.otf') format("opentype");
+}
+
 
 /* Mixins */
 
@@ -183,10 +187,6 @@ textarea{
     }
 }
 
-header{
-    height: 10vh;
-}
-
 .navigation-menu{
     display: none;
     @include lg-screen {
@@ -196,6 +196,22 @@ header{
         list-style: none;
         margin: 0px;
         padding: 0px;
+        ul{
+            display:flex;
+            padding:3px;
+            li{
+                list-style:none;
+                a{
+                    padding:5px;
+                    margin:0 1em;
+                    color: #fff;
+                    transition: all ease-in-out .3s;
+                    &:hover{
+                        color:grey;
+                    }
+                }
+            }
+        }
         .menu-item{
             margin: 0px 15px;
             display: inline-block;
@@ -205,6 +221,7 @@ header{
             }
         }
     }
+
 }
 
 .mobile-nav{
@@ -230,6 +247,9 @@ header{
                 color: #fff;
                 font-weight: 400;
             }
+        }
+        li{
+            list-style: none;
         }
     }
 }
