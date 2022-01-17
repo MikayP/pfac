@@ -50,5 +50,7 @@
 		"styles-rtl": "gulp stylesRTL",
 		"cache-clear": "gulp clearCache"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"animate.css": "^4.1.1"
+	}
 }
