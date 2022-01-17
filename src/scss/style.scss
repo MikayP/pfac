@@ -44,6 +44,7 @@ $primary-font: 'glacial-indifference', serif;
 @import "additional-styles";
 @import "video-page";
 @import "general_styling";
+@import "animate_css_tweaks";
 /* Basic Styles */
 
 :root{
@@ -316,7 +317,7 @@ $menu_transition: .4s;
     span{
         display: block;
         position: absolute;
-        height: 3px;
+        height: 4px;
         width: 100%;
         background-color: #fff;
         opacity: 1;
