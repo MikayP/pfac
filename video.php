@@ -19,7 +19,7 @@ $sub_header = get_field('subheading');
 		</video>
         <div class="col-md-8 justify-content-center h1-container">
             <h1 class=""><?php the_title(); ?></h1>
-            <?php if($sub_header) { ?><h2><?php echo $sub_header; ?></h2><?php } ?>
+            <?php if($sub_header) { ?><h4><?php echo $sub_header; ?></h4><?php } ?>
         </div>
         </div>
         <div class="video-template-content col-md-10 mx-auto">

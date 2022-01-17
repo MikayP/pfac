@@ -8,12 +8,11 @@
 /* Variables */
 
 $color-1: rgb(206, 20, 20);
-$color-2: rgb(58, 58, 58);
 $color-3: rgb(167, 167, 167);
 $border-radius: 8px;
 $primary-font: 'glacial-indifference', serif;
 
-@import "video-page";
+
 
 @font-face {
     font-family: glacial-indifference;
@@ -43,7 +42,8 @@ $primary-font: 'glacial-indifference', serif;
 
 @import "bootstrap-grid";
 @import "additional-styles";
-
+@import "video-page";
+@import "general_styling";
 /* Basic Styles */
 
 :root{
@@ -77,7 +77,7 @@ a{
 
 h1, h2, h3, h4, h5, h6{
     line-height: 1em;
-    margin: 0px 0px 1rem;
+    margin: 12px 6px;
 }
 
 h1{
@@ -98,7 +98,7 @@ h4{
 
 p{
     font-size: 1rem;
-    margin: 0px 0px 1rem;
+    margin: 0px;
     line-height: 1.7em;
 }
 
@@ -117,6 +117,10 @@ button {
     -webkit-appearance: button;
     cursor: pointer;
     border: none;
+}
+
+.overflow-y-hidden{
+    overflow-y: hidden;
 }
 
 input[type=text] {
@@ -192,7 +196,7 @@ $menu_transition: .4s;
     position:fixed;
     color:red;
     transition:$menu_transition;
- 
+    z-index:5;
     .image-container{
        width:125px;
         transition:$menu_transition;
@@ -261,13 +265,13 @@ $menu_transition: .4s;
 .mobile-nav{
     width: 100vw;
     height: 100vh;
-    background-color: $color-2;
+    background-color: black;
     transform: translateX(-100vw);
     transition: all 450ms ease-in-out;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 99;
+    z-index: 4;
     &.open{
         transform: translateX(0px);
     }
@@ -275,13 +279,18 @@ $menu_transition: .4s;
         list-style: none;
         margin: 0px;
         padding: 0px;
-        .menu-item{
-            margin: 15px 0px;
-            a{
-                color: #fff;
-                font-weight: 400;
+        ul{
+            padding:0px;
+            li{
+                margin:15px;
+                a{
+                    color: #fff;
+                    font-weight: 400;
+                    font-size:2em;
+                }
             }
         }
+          
         li{
             list-style: none;
         }
@@ -289,8 +298,8 @@ $menu_transition: .4s;
 }
 
 #burger-nav {
-    width: 30px;
-    height: 20px;
+    width: 50px;
+    height: 40px;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
@@ -309,7 +318,7 @@ $menu_transition: .4s;
         position: absolute;
         height: 3px;
         width: 100%;
-        background-color: $color-2;
+        background-color: #fff;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);

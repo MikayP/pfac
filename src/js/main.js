@@ -4,6 +4,7 @@ jQuery(document).ready(function($){
         $('#burger-nav').toggleClass('open');
         $('.mobile-nav').toggleClass('open');
         $('body').toggleClass('no-scroll');
+        $('html').toggleClass('overflow-y-hidden');
     });
 
 });
