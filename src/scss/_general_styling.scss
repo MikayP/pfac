@@ -1,4 +1,10 @@
 .two-one-column-row{
+
+    .col-12{
+        align-items: center;
+        display:flex;
+        margin:12px;
+    }
     .small{
        p{
            font-size:14px;

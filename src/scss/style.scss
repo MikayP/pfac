@@ -45,6 +45,7 @@ $primary-font: 'glacial-indifference', serif;
 @import "video-page";
 @import "general_styling";
 @import "animate_css_tweaks";
+@import "background_card_block";
 /* Basic Styles */
 
 :root{
@@ -107,7 +108,9 @@ img{
     width: 100%;
     height: auto;
 }
-
+.border-radius{
+    border-radius:$border-radius;
+}
 button {
     padding: 1rem 2.5rem;
     text-transform: uppercase;
