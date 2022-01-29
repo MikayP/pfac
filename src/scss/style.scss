@@ -10,6 +10,7 @@
 $color-1: rgb(206, 20, 20);
 $color-3: rgb(167, 167, 167);
 $border-radius: 8px;
+$logo-blue:#539BCA;
 $primary-font: 'glacial-indifference', serif;
 
 
@@ -44,7 +45,7 @@ $primary-font: 'glacial-indifference', serif;
 @import "additional-styles";
 @import "video-page";
 @import "general_styling";
-@import "animate_css_tweaks";
+// @import "animate_css_tweaks";
 @import "background_card_block";
 /* Basic Styles */
 
@@ -96,6 +97,9 @@ h3{
 
 h4{
     font-size: 1.5rem;
+}
+h5{
+    line-height:1.75em;
 }
 
 p{

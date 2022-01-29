@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<header class="d-flex align-items-center container-fluid desktop-nav">
+<header class="d-flex align-items-center container-fluid desktop-nav " data-aos="fade-down" data-aos-duration="1000">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <a class="image-container center-txt" href="/">

@@ -1,3 +1,4 @@
+AOS.init();
 jQuery(document).ready(function($){
 
     $('#burger-nav').click(() => {
@@ -7,7 +8,7 @@ jQuery(document).ready(function($){
         $('html').toggleClass('overflow-y-hidden');
     });
     
-    document.documentElement.style.setProperty('--animate-duration', '1.2s');
+  
 });
 
 window.onscroll = function() {scrollFunction()};

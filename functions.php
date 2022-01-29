@@ -1,18 +1,21 @@
 <?php
  
-function custom_theme_assets() {
+function custom__theme_css() {
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'animate', '/wp-content/themes/pfac/src/animate.css/animate.min.css' );
+	// wp_enqueue_style( 'animate', '/wp-content/themes/pfac/src/animate.css/animate.min.css' );
+	wp_enqueue_style( 'aos-css', '/wp-content/themes/pfac/src/aos-master/dist/aos.css' );
+}
+ 
+function custom__theme_js() {
 	wp_enqueue_script( 'jquery' );
-
-	
 	wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/bb3d3bd63e.js' );
+	wp_enqueue_script( 'aos-js', '/wp-content/themes/pfac/src/aos-master/dist/aos.js', array(), '1.0', true );
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 }
  
-add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
-
+add_action( 'wp_enqueue_scripts', 'custom__theme_css' );
+add_action( 'wp_enqueue_scripts', 'custom__theme_js', 99999 );
 register_nav_menus( [ 'primary' => __( 'Primary Menu' ) ] );
 
 /* Add Featured Image Support To Your WordPress Theme */
