@@ -1,0 +1,56 @@
+.short-header{
+ 
+    h1{
+        font-size:2.5rem;
+    }
+    &_top_container{
+        min-height:250px;
+        position:relative;
+        padding:8em 8em 4em;
+        &_box{
+            text-align: center;
+         
+            width:350px;
+            .content{
+                border:1px solid black;
+                border-radius: $border-radius;
+                min-height:230px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin:10px;
+                min-width:350px;
+            }
+        }
+        &_box_1, &_box_2{
+            
+        }
+        &_box_1{
+            left:-15px;
+            position:absolute;
+            bottom:6em;
+            .content{
+                background-color:red;
+            }
+    
+        }
+        &_box_2{
+            
+    
+    .content{
+        background-color:rgb(48, 136, 177);
+    }
+        }
+    }
+    @include md-screen{
+        &_top_container{
+            &_box_1{
+                left: auto;
+                top:auto;
+                margin-right: 8em;
+                margin-top: -2em;
+            }
+        }
+   
+    }
+}
