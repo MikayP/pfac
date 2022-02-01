@@ -1,5 +1,5 @@
 $height: 75vh;
-$container_spacing: 85px; 
+$container_spacing: 125px; 
 .video-template{
     position: absolute;
     top: 0;
@@ -18,13 +18,38 @@ $container_spacing: 85px;
         }
         .h1-container{
             text-align: center;
-            background-color:rgba(255, 0, 0, 0.712);
-            margin:4em 1em 0em;
+            margin:0em 1em 0em;
             border-radius: $border-radius;
-            padding:1em;
-            h1{
+            .inner-container{
+                justify-content:center;
+                padding-top:1em;
            
+          
+                i{
+                    margin-left:5%;
+                    font-size:24px;
+                    transition:$menu_transition;
+                }
+                .left,.right{
+                    margin:0;
+                    padding:1em;
+                    font-weight: 400;
+                    color:white;
+                }
+                .left{
+                    background-color:#141315;
+                    border-radius:8px 8px 0px 0px;
+                  
+                }
+                .right{
+                    background-color:#1c1b20;
+                    border-radius:0px 0px 8px 8px;
+                    font-size:20;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
+
         } 
    
     }
@@ -42,14 +67,35 @@ $container_spacing: 85px;
             }
             .h1-container{
                 position: absolute;
-                background-color:rgb(255, 0, 0);
                 margin:0em;
                 bottom:$container_spacing;
-            
+                .inner-container{
+                    justify-content:space-between;
+                    align-items: center;
+                    padding:0em;
+                    h4{
+                        padding:1em;
+                        margin:0;
+                    }
+                    .left,.right{
+                        min-height:100px;
+                    }
+                    .left{
+                        border-radius:8px 0px 0px 8px;
+                    }
+                    .right{
+                        border-radius:0px 8px 8px 0px;
+                    }
+                    &:hover{
+                        i{
+                            margin-left:10%;
+                        }
+                    }
+                }
             }
         }
         &-content{
-            margin-top:120px; 
+            margin-top:70px; 
         }
         }
     }

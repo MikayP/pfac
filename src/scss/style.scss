@@ -12,7 +12,7 @@ $color-3: rgb(167, 167, 167);
 $border-radius: 8px;
 $logo-blue:#539BCA;
 $primary-font: 'glacial-indifference', serif;
-
+$menu_transition:all .4s ease-in-out;
 
 
 @font-face {
@@ -49,6 +49,7 @@ $primary-font: 'glacial-indifference', serif;
 @import "background_card_block";
 @import "short-header";
 @import "calendar";
+@import "single";
 /* Basic Styles */
 
 :root{
@@ -200,18 +201,22 @@ textarea{
         height: 100%;
     }
 }
-$menu_transition: .4s;
+
 .desktop-nav{
-    padding-top:1em;
+    padding-top:8px;
+    padding-bottom:8px;
     position:fixed;
     color:red;
+   
     transition:$menu_transition;
     z-index:5;
     .image-container{
        width:125px;
+       
         transition:$menu_transition;
         img{
             width:125px;
+            // transform: scale(1);
             transition:$menu_transition;
         }
      }
@@ -221,11 +226,11 @@ $menu_transition: .4s;
         @include lg-screen {
             display: block;
         }
-        .menu{
+        .menu-menu-container{
             list-style: none;
             margin: 0px;
             padding: 0px;
-            ul{
+            .menu{
                 display:flex;
                 padding:3px;
                 margin: 10px 0;
@@ -233,12 +238,14 @@ $menu_transition: .4s;
                     list-style:none;
                     a{
                         padding:5px;
-                        margin:0 1em;
-                        color: #fff;
+                        margin:0 12px;
+                        color: black;
                         font-size:18px;
-                        transition: .3s;
+                        letter-spacing:1px;
+                        font-weight:800;
+                        transition:$menu_transition;
                         &:hover{
-                            color:grey;
+                            color:$logo-blue;
                         }
                     }
                 }
@@ -255,17 +262,17 @@ $menu_transition: .4s;
     
     }
     &.header_expand{
-        background-color:rgb(92, 92, 92);
-        padding-top:0em;
+        background-color:rgba(92, 92, 92, 0.842);
         .image-container{
             img{
-                width:95px;
+                width:85px;
+                // transform: scale(1);
              }
         }
  
         .font_expand{
             a{ 
-                // font-size:35px !important;
+                color:white !important;
             }
 
         }
@@ -309,7 +316,7 @@ $menu_transition: .4s;
 
 #burger-nav {
     width: 50px;
-    height: 40px;
+    height: 20px;
     position: relative;
     transform: rotate(0deg);
     transition: .5s ease-in-out;

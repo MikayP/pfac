@@ -3,13 +3,13 @@
  
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=viewport content="width=device-width, initial-scale=1" content="noindex, nofollow">
     <title><?php bloginfo( 'name' ); ?></title>
     <?php wp_head() ?>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<header class="d-flex align-items-center container-fluid desktop-nav " data-aos="fade-down" data-aos-duration="1000">
+<header class="d-flex align-items-center container-fluid desktop-nav ">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <a class="image-container center-txt" href="/">

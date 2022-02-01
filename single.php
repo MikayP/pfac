@@ -8,8 +8,8 @@ if ( have_posts() ) :
  		<?php $theTitle = get_the_title();
 		$theTitleExplode = explode(' ' ,trim($theTitle)); 
 		$theTitleImplode = implode('-',$theTitleExplode); ?>
-        <main id="post-<?php echo $theTitleImplode; ?>">
-			<div class="container my-5">
+        <main id="post-<?php echo $theTitleImplode; ?>" class="post">
+			<div class="container">
 				<?php $featuredImage = get_the_post_thumbnail();
 				if ($featuredImage) : ?>
 				<img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">

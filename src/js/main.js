@@ -8,7 +8,6 @@ jQuery(document).ready(function($){
         $('html').toggleClass('overflow-y-hidden');
     });
     
-  
 });
 
 window.onscroll = function() {scrollFunction()};
