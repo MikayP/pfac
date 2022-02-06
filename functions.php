@@ -1,5 +1,19 @@
 <?php
- 
+ // register footer
+function ns_register_footer_widget() {
+
+	register_sidebar(
+		array(
+			'before_widget' => '<footer class="site-footer">',
+			'after_widget'  => '</footer>',			
+			'name'        => __( 'Footer-Widget', 'pfacarts' ),
+			'id'          => 'footer-widget',
+			'description' => __( 'This is the widget area in the bottom footer.', 'pfacarts' ),
+		)
+	);
+}
+
+add_action( 'widgets_init', 'ns_register_footer_widget' );
 function custom__theme_css() {
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
@@ -55,3 +69,4 @@ function custom_excerpt_more($more) {
 	return '...';
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
+

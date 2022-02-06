@@ -1,11 +1,21 @@
-$height: 75vh;
-$container_spacing: 125px; 
+$height: 90vh;
+$container_spacing: 0px; 
 .video-template{
     position: absolute;
     top: 0;
     left:0;
     height: 100%;
     width: 100%;
+    .background_layer_dark{
+        opacity: 0.75;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: $height;
+		background-color: #05050585;
+		box-shadow: 5px 5px 5px grey;
+    } 
     .video-container{
         height:$height;
         background-size:cover;
@@ -15,6 +25,10 @@ $container_spacing: 125px;
         align-items: center;
         video{
             display:none;
+        }
+        h1{
+            color:white;
+            text-shadow:2px 2px 5px black;
         }
         .h1-container{
             text-align: center;
@@ -56,6 +70,9 @@ $container_spacing: 125px;
 
 
         @include md-screen{
+            &-content{
+                margin-top:105px; 
+            }
             .video-container{
                 background-image:none;
             video{
@@ -69,6 +86,7 @@ $container_spacing: 125px;
                 position: absolute;
                 margin:0em;
                 bottom:$container_spacing;
+           
                 .inner-container{
                     justify-content:space-between;
                     align-items: center;
@@ -94,9 +112,7 @@ $container_spacing: 125px;
                 }
             }
         }
-        &-content{
-            margin-top:70px; 
-        }
+    
         }
     }
 

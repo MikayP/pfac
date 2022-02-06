@@ -10,7 +10,9 @@
 $color-1: rgb(206, 20, 20);
 $color-3: rgb(167, 167, 167);
 $border-radius: 8px;
-$logo-blue:#539BCA;
+$logo-red:#EB2626;
+$logo-yellow:#FFE300;
+$logo-blue:#359BCA;
 $primary-font: 'glacial-indifference', serif;
 $menu_transition:all .4s ease-in-out;
 
@@ -73,7 +75,7 @@ body{
     &.no-scroll{
         overflow: hidden;
         width: 100vw;
-        height: 100vh;
+
     }
 }
 
@@ -203,21 +205,22 @@ textarea{
 }
 
 .desktop-nav{
-    padding-top:8px;
-    padding-bottom:8px;
+    padding-top:2px;
+    padding-bottom:2px;
     position:fixed;
-    color:red;
-   
+    background-color:rgba(255, 255, 255, 0.76);
     transition:$menu_transition;
     z-index:5;
     .image-container{
        width:125px;
-       
+           
         transition:$menu_transition;
         img{
             width:125px;
             // transform: scale(1);
             transition:$menu_transition;
+            display:flex;
+            margin:auto;
         }
      }
 
@@ -261,38 +264,40 @@ textarea{
         }
     
     }
-    &.header_expand{
-        background-color:rgba(92, 92, 92, 0.842);
-        .image-container{
-            img{
-                width:85px;
-                // transform: scale(1);
-             }
-        }
- 
-        .font_expand{
-            a{ 
-                color:white !important;
-            }
 
+}
+.desktop-nav.header_expand{
+    background-color:white;
+    .image-container{
+        img{
+            width:85px;
+            // transform: scale(1);
+         }
+    }
+
+    .font_expand{
+        a{ 
+            // color:white !important;
         }
+
     }
 }
-
 .mobile-nav{
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    opacity: 0.95;
+    background-color: #050505;
     transform: translateX(-100vw);
     transition: all 450ms ease-in-out;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 4;
+    padding-top:10em;
     &.open{
         transform: translateX(0px);
     }
-    .menu{
+    .menu-menu-container{
         list-style: none;
         margin: 0px;
         padding: 0px;
@@ -328,18 +333,33 @@ textarea{
     &.open{
         span{
             background-color: #fff;
+            &:nth-child(3){
+                background-color:#EB2626;
+            }
         }
+     
     }
     span{
         display: block;
         position: absolute;
         height: 4px;
         width: 100%;
-        background-color: #fff;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
         transition: .25s ease-in-out;
+        &:nth-child(1){
+            background-color:$logo-red;
+        }
+        &:nth-child(2){
+            background-color:$logo-blue;
+        }
+        &:nth-child(3){
+            background-color:$logo-yellow;
+        }
+        &:nth-child(4){
+            background-color:$logo-blue;
+        }
     }
 }
 
@@ -373,4 +393,15 @@ textarea{
     top: 18px;
     width: 0%;
     left: 50%;
+}
+
+.site-footer{
+    background-color:#2F7AE0;
+    padding:12px 3em;
+    margin-top:3em;
+    
+    p{
+        font-size:16px;
+        color:white;
+    }
 }

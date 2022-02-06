@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 
-<header class="d-flex align-items-center container-fluid desktop-nav ">
+<header  class="d-flex align-items-center container-fluid desktop-nav ">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <a class="image-container center-txt" href="/">
-                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo">
+                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/02/Transparent-PfAC-Logo.png'); ?> " alt="logo">
             </a>
             <nav class="navigation-menu">
                 <?php $args = [ 'theme_location' => 'primary' ];
@@ -29,7 +29,7 @@
     </div>
 </header>
 <nav class="mobile-nav d-flex
-justify-content-center align-items-center">
+justify-content-center ">
 <?php $primary = [ 'theme_location' => 'primary' ];
         wp_nav_menu( $primary ) ?>
 </nav>

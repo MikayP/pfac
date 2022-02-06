@@ -2,7 +2,10 @@
     justify-content: center;
     .col-12{
         margin:12px 0px;
+        padding-left:8px;
+        padding-right:8px;
     }
+ 
     .small{
        p{
            font-size:14px;
@@ -15,4 +18,72 @@
     bottom: 16px;
     color:#fff;
     font-size:1.7em;
+}
+.border-radius_global{
+    border-radius:$border-radius;
+}
+.background_layer{
+    height:100%;
+    &_dark_global{
+        opacity: 0.75;
+        position: absolute;
+        left: 0;
+        top: 0;  
+        border-radius:$border-radius;
+        z-index:-1;
+        width: 100%;
+        height: 100%;
+        background-color: #050505;
+        box-shadow: 5px 5px 5px grey;
+    }
+}
+
+.wp-block-latest-posts__list{
+    margin-top:8px;
+    padding-top:12px;
+    a{
+        font-size:1.1em;
+        color:$logo-blue;
+        display:block;
+        transition:$menu_transition;
+    }
+    li {
+        padding:6px 11px 6px;
+        transition:$menu_transition;
+        &:hover{
+           background-color: rgba(0,0,0,.705);
+           a{
+            color:white;
+           }
+   
+        }
+      
+}
+}
+
+// events list block
+
+.tribe-events-view--widget-events-list{
+    margin-bottom:0px !important;
+    .tribe-events-widget-events-list{
+
+        h2, span,a,time {
+            font-family:glacial-indifference !important;
+            color:white !important;
+            letter-spacing:1px;
+        }
+        h2{
+           
+        line-height: 1.7em !important;
+        font-family:glacial-indifference !important;
+        font-size:1.2em !important;
+    }
+       a{
+        font-size:17px;
+        &:hover{
+            outline-color:white !important;
+            border-bottom-color:white !important;
+        }
+       } 
+    }
 }
