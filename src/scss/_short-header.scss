@@ -28,7 +28,6 @@
         &_box_1{
             left:-15px;
             position:absolute;
-            bottom:6em;
             .content{
                 background-color:red;
             }
@@ -47,8 +46,8 @@
             &_box_1{
                 left: auto;
                 top:auto;
-                margin-right: 8em;
-                margin-top: -2em;
+                margin-right: 8em !important;
+                margin-top: -2em !important;
             }
         }
    

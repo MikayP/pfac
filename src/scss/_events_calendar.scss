@@ -1,0 +1,50 @@
+.tribe-common {
+	margin-top: -78px;
+
+	.tribe-events-before-html {
+
+
+		.events-header {
+			margin: 2em -152px 1em;
+
+			&_top_container {
+				min-height: 50vh;
+				display: flex;
+				align-items: center;
+				padding: 8em 4px 3em;
+				position: relative;
+
+				&_box {
+					border-radius: $border-radius;
+
+					@media(max-width:786px) {
+						max-width: 95vw;
+					}
+				}
+
+				h1 {
+
+					padding-top: 16px;
+					padding-bottom: 16px;
+					color: white;
+
+				}
+			}
+		}
+	}
+
+	.content-row {
+		.content {
+			padding: 1em 0em;
+			font-weight: 600;
+			font-size: 30px;
+		}
+	}
+}
+
+
+.tribe-events {
+	&-c-search__button {
+		// background-color:#4D57D6 !important;
+	}
+}

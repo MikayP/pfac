@@ -50,7 +50,7 @@ $menu_transition:all .4s ease-in-out;
 // @import "animate_css_tweaks";
 @import "background_card_block";
 @import "short-header";
-@import "calendar";
+@import "events_calendar";
 @import "single";
 /* Basic Styles */
 
@@ -211,6 +211,10 @@ textarea{
     background-color:rgba(255, 255, 255, 0.76);
     transition:$menu_transition;
     z-index:5;
+    .container{
+        padding-right:27px;
+        padding-left:27px;
+    }
     .image-container{
        width:125px;
            
@@ -399,9 +403,9 @@ textarea{
     background-color:#2F7AE0;
     padding:12px 3em;
     margin-top:3em;
-    
+     
     p{
-        font-size:16px;
+        font-size:14px;
         color:white;
     }
 }

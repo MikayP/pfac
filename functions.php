@@ -70,3 +70,9 @@ function custom_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'custom_excerpt_more');
 
+function my_awesome_tag_fixer( $input ){
+	return preg_replace( '/(<.+)\s\/>/', '$1>', $input );
+  }
+  
+  foreach( array('the_content', 'the_excerpt', 'comment_text') as $filter )
+	add_filter( $filter, 'my_awesome_tag_fixer', 12 );

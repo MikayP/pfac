@@ -51,3 +51,7 @@ $sub_header = get_field('subheading');
     <?php get_footer(); ?>
 </div>
 
+
+<div class="h-100 border-radius_global p-0 col-12 background_layer" style="background-image: url('/wp-content/uploads/2022/01/henrik-donnestad-t2Sai-AqIpI-unsplash.jpg');" data-aos="fade-down" data-aos-duration="500">
+<div class="background_layer_dark_global background_layer_dark_global_z_index_1"></div>
+</div>

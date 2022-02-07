@@ -14,17 +14,17 @@ const mainStyle = 'src/scss/style.scss';
 const jsPath = 'src/js/**/*.js';
 const imgPath = 'src/images/*';
 
-function copyHtml() {
-  return src('src/*.html').pipe(gulp.dest('./'));
-}
+// function copyHtml() {
+//   return src('src/*.html').pipe(gulp.dest('./'));
+// }
 
-function copyPHP(){
-    return src('./src/*.php').pipe(gulp.dest('./'));
-}
+// function copyPHP(){
+//     return src('./src/*.php').pipe(gulp.dest('./'));
+// }
 
-function imgTask() {
-  return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('./images'));
-}
+// function imgTask() {
+//   return src('src/images/*').pipe(imagemin()).pipe(gulp.dest('./images'));
+// }
 
 function jsTask() {
   return src(jsPath)
@@ -45,15 +45,13 @@ function cssTask() {
 }
 
 function watchTask() {
-  watch([mainStyle, jsPath, mainDir, imgPath], { interval: 1000 }, parallel(cssTask, jsTask, copyPHP, copyHtml, imgTask));
+  watch([mainStyle, jsPath, mainDir, imgPath], { interval: 1000 }, parallel(cssTask, jsTask));
 }
 
 exports.cssTask = cssTask;
 exports.jsTask = jsTask;
-exports.imgTask = imgTask;
-exports.copyHtml = copyHtml;
-exports.copyPHP = copyPHP;
+
 exports.default = series(
-  parallel(copyHtml, copyPHP, imgTask, jsTask, cssTask),
+  parallel(jsTask, cssTask),
   watchTask
 );

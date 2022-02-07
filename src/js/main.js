@@ -24,5 +24,9 @@ jQuery(document).ready(function($){
       $('body').toggleClass('no-scroll');
       $('html').toggleClass('overflow-y-hidden');
   });
-  AOS.init();
+
+
+      AOS.init();
+
+ 
 });

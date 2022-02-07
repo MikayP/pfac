@@ -10,7 +10,7 @@
 </head>
 
 <header  class="d-flex align-items-center container-fluid desktop-nav ">
-    <div class="container">
+    <div class="container col-md-10 justify-content-center">
         <div class="row justify-content-between align-items-center">
             <a class="image-container center-txt" href="/">
                 <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/02/Transparent-PfAC-Logo.png'); ?> " alt="logo">
