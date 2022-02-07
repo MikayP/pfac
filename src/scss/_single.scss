@@ -1,6 +1,28 @@
-.single{
-    .post{
-        margin-top:8em;
-    }
-}
+.single-post {
+	
+position:relative;
+
+			&_top_container {
+				min-height: 50vh;
+				display: flex;
+				align-items: center;
+				padding: 4em 4px 0em;
+				position: relative;
+
+				h1 {
+
+					padding-top: 16px;
+					padding-bottom: 16px;
+                    color: white;
+                    text-align:center;
+                    @media(max-width:768px){
+                        font-size:36px;
+                    }
+                }
+			}
+		&_container{
+            padding:1em 12px 0em;
+        }
+	}
+
 

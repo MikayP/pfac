@@ -272,6 +272,7 @@ textarea{
 }
 .desktop-nav.header_expand{
     background-color:white;
+   box-shadow: 0px 5px 5px rgba(128, 128, 128, 0.589);
     .image-container{
         img{
             width:85px;
@@ -398,11 +399,13 @@ textarea{
     width: 0%;
     left: 50%;
 }
-
+.main-wrapper{
+    min-height: 80vh;
+}
 .site-footer{
-    background-color:#2F7AE0;
+    background-color:$logo-blue;
     padding:12px 3em;
-    margin-top:3em;
+    margin-top:2em;
      
     p{
         font-size:14px;
