@@ -6,6 +6,8 @@ $container_spacing: 0px;
     left:0;
     height: 100%;
     width: 100%;
+
+      
     .background_layer_dark{
         opacity: 0.75;
 		position: absolute;
@@ -26,19 +28,23 @@ $container_spacing: 0px;
         video{
             display:none;
         }
-        h1{
-            color:white;
-            text-shadow:2px 2px 5px black;
-        }
+    
         .h1-container{
             text-align: center;
             margin:0em 1em 0em;
             border-radius: $border-radius;
+            @media(max-width:768px){
+                padding-top:5em;
+            }
+                   
+            h1{
+                color:white;
+                text-shadow:2px 2px 5px black;
+            }
             .inner-container{
                 justify-content:center;
                 padding-top:1em;
-           
-          
+    
                 i{
                     margin-left:5%;
                     font-size:24px;
