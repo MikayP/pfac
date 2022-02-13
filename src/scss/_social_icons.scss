@@ -1,0 +1,48 @@
+.social-media-icons{
+    position:absolute;
+    display:flex;
+justify-content: center;
+    bottom:0;
+    a{
+        color:white;
+        background-color:$logo-red;
+        margin: 0 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:28px;
+        height:50px;
+        width:50px;
+        border-radius: 50%;
+        &:hover{
+            color:$logo-blue; 
+    }
+        &:nth-child(2){
+            background-color:$logo-yellow;
+            &:hover{
+                color:$logo-blue;
+            }
+        }
+        &:nth-child(3){
+            background-color:$logo-blue;
+            &:hover{
+               color: $logo-red;
+            }
+        }
+        i{
+            text-shadow: 1px 1px 8px black;
+        }
+        &,i{
+            transition:all .2s ease-in-out;
+        }
+
+}
+    @include md-screen{
+        a{
+            font-size:32px;
+            height:60px;
+            width:60px;
+        }
+    
+    } 
+}

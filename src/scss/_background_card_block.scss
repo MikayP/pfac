@@ -3,11 +3,11 @@
 	height: 100%;
 	display: flex;
 	align-items: center;
-	background-size: contain;
+	background-size: cover;
 	border-radius: $border-radius;
 
 	&_img {
-		opacity: 0.75;
+		opacity: 0.8;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -74,4 +74,22 @@
             }
         }
     }
+
+    &_light_bg{
+        .background-card-block{
+            &_img{
+                background-color:rgb(170, 158, 158);
+            }
+            &_content{
+                color:black;
+            }
+        }
+       i{
+           color:black;
+       }
+    }
+}
+
+.top_card_bg{
+    padding:0.5em;
 }

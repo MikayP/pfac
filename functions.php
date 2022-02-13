@@ -17,7 +17,6 @@ add_action( 'widgets_init', 'ns_register_footer_widget' );
 function custom__theme_css() {
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-	wp_enqueue_style( 'flickity', '/wp-content/themes/pfac/src/flickity/flickity.css' );
 	// wp_enqueue_style( 'animate', '/wp-content/themes/pfac/src/animate.css/animate.min.css' );
 	wp_enqueue_style( 'aos-css', '/wp-content/themes/pfac/src/aos-master/dist/aos.css' );
 }
@@ -25,11 +24,26 @@ function custom__theme_css() {
 function custom__theme_js() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/bb3d3bd63e.js' );
-	wp_enqueue_script( 'flickity-js', '/wp-content/themes/pfac/src/flickity/flickity.js', array(), '1.0', true  );
 	wp_enqueue_script( 'aos-js', '/wp-content/themes/pfac/src/aos-master/dist/aos.js', array(), '1.0', true );
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(), '1.0', true);
 }
  
+
+function flickity_script(){
+    if ( is_home() || is_page_template('video.php') ) {
+		wp_enqueue_script( 'flickity-js-library', '/wp-content/themes/pfac/src/flickity/flickity-library.js', array(), '1.0', true );
+		wp_enqueue_script( 'flickity-js', '/wp-content/themes/pfac/src/flickity/flickity.js', array(), '1.0', true );
+    } 
+}
+function flickity_style(){
+    if ( is_home() ||  is_page_template('video.php')) {
+		wp_enqueue_style( 'flickity-css', '/wp-content/themes/pfac/src/flickity/flickity.css' );
+    } 
+}
+
+add_action('wp_enqueue_scripts','flickity_script', 99999 );
+add_action( 'wp_enqueue_scripts', 'flickity_style' );
+
 add_action( 'wp_enqueue_scripts', 'custom__theme_css' );
 add_action( 'wp_enqueue_scripts', 'custom__theme_js', 99999 );
 register_nav_menus( [ 'primary' => __( 'Primary Menu' ) ] );

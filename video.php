@@ -2,6 +2,7 @@
 /**
 * Template Name: Video Header
 */
+
 ?>
 
 <?php get_header();
@@ -14,14 +15,15 @@ $sub_header = get_field('subheading');
 	<div class="video-container" style="background-image:url('https://source.unsplash.com/user/c_v_r/600x300')">
     <div class="carousel" id="flickity" data-flickity>
         <div class="carousel-cell">
-    	<video muted preload="metadata" poster="">>
-			<source src="<?php echo $video_file; ?>" type="video/mp4">
+        <video muted preload="metadata" poster="">>
+			<source src="/wp-content/uploads/2022/02/small.mp4" type="video/mp4">
 			Your browser does not support the video tag.
         </video>
+    
     </div>
     <div class="carousel-cell">
-    	<video muted preload="metadata" poster="">>
-			<source src="<?php echo $video_file; ?>" type="video/mp4">
+    <video muted preload="metadata" poster="">>
+			<source src="http://pflugarts.local/wp-content/uploads/2022/02/sample-5s.mp4" type="video/mp4">
 			Your browser does not support the video tag.
         </video>
     </div>

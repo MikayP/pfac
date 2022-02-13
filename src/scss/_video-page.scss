@@ -6,8 +6,8 @@ $container_spacing: 0px;
     left:0;
     height: 100%;
     width: 100%;
-
-      
+    pointer-events:none;
+    
     .background_layer_dark{
         opacity: 0.75;
 		position: absolute;
@@ -34,9 +34,9 @@ $container_spacing: 0px;
             margin:0em 1em 0em;
             border-radius: $border-radius;
             @media(max-width:768px){
-                padding-top:5em;
-            }
-                   
+                padding-top:12em;
+            } 
+                     
             h1{
                 color:white;
                 text-shadow:2px 2px 5px black;
@@ -76,7 +76,9 @@ $container_spacing: 0px;
     .tribe-common{
         margin-top:0px;
     }
-
+    &-content{
+        margin-top:50px; 
+    }
         @include md-screen{
             &-content{
                 margin-top:105px; 
