@@ -7,44 +7,52 @@
 
 <?php get_header();
 
-$video_file = get_field('video_file_url');
+$video_file_url_1 = get_field('video_file_url_1');
+$slider_text_1 = get_field('slider_text_1');
+$slider_url_1 = get_field('slider_url_1');
+$slider_url_1 = get_field('slider_url_1');
+
+$video_file_url_2 = get_field('video_file_url_2');
+$slider_text_2 = get_field('slider_text_2');
+$slider_url_2 = get_field('slider_url_2');
+
+$video_file_url_3 = get_field('video_file_url_3');
+$slider_text_3 = get_field('slider_text_3');
+$slider_url_3 = get_field('slider_url_3');
+
 $sub_header = get_field('subheading');
 
 ?>
 <div class="video-template">
 	<div class="video-container" >
     <div class="carousel" id="flickity" data-flickity='{ "draggable": false }'>
-    <div class="carousel-cell">
-    	<video muted preload="metadata" poster="">
-			<source src="<?php echo $video_file; ?>" type="video/mp4">
-			Your browser does not support the video tag.
-        </video>
-        <div class="background_layer_dark">   <a class="background_href" href="/calendar"><h3>Slider 1 Content</h3></a></div>
-     
-    </div>
+
     <div class="carousel-cell">
     <video muted preload="metadata" poster="">
-			<source src="http://pflugarts.local/wp-content/uploads/2022/02/sample-5s.mp4" type="video/mp4">
+			<source src="<?php echo $video_file_url_2; ?>" type="video/mp4">
 			Your browser does not support the video tag.
         </video>
-        <div class="background_layer_dark">   <a class="background_href" href="/calendar"><h3>Slider 2 Content</h3></a></div>
     </div>  
     <div class="carousel-cell">
         <video muted preload="metadata" poster="">
-			<source src="/wp-content/uploads/2022/02/small.mp4" type="video/mp4">
+			<source src="<?php echo $video_file_url_3; ?>" type="video/mp4">
 			Your browser does not support the video tag.
         </video>
-        <div class="background_layer_dark">   <a class="background_href" href="/calendar"><h3>Slider 3 Content</h3></a></div>
 
     </div>
-
-
+    <div class="carousel-cell">
+    	<video muted preload="metadata" poster="">
+			<source src="<?php echo $video_file_url_1; ?>" type="video/mp4">
+			Your browser does not support the video tag.
+        </video>
     </div>
-    
+    </div>
+    <div class="background_layer_dark"> </div>
    
    
         <div data-aos="fade-down" data-aos-duration="1000" class=" col-md-9 justify-content-center h1-container">
-        <h1 class="center-txt mb-3"><?php the_title(); ?></h1>
+        <a id="video_h1" href="<?php echo $slider_url_1 ?>"><h1 class="center-txt mb-3"><?php echo $slider_text_1 ?></h1></a>
+
         <a href="<?php echo get_field('subheading_url'); ?>">
            <div class="inner-container row">
 
@@ -68,7 +76,9 @@ $sub_header = get_field('subheading');
 ?>
 
 
-	
+	<script>
+    
+    </script>
 
 
     <?php get_footer(); ?>

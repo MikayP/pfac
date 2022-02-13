@@ -80,6 +80,7 @@
 						};
 					}
 					console.log(vidDurations);
+				
 				}
 
 			},
