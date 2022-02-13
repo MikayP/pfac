@@ -12,30 +12,37 @@ $sub_header = get_field('subheading');
 
 ?>
 <div class="video-template">
-	<div class="video-container" style="background-image:url('https://source.unsplash.com/user/c_v_r/600x300')">
-    <div class="carousel" id="flickity" data-flickity>
-        <div class="carousel-cell">
-        <video muted preload="metadata" poster="">>
-			<source src="/wp-content/uploads/2022/02/small.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-        </video>
-    
-    </div>
+	<div class="video-container" >
+    <div class="carousel" id="flickity" data-flickity='{ "draggable": false }'>
     <div class="carousel-cell">
-    <video muted preload="metadata" poster="">>
-			<source src="http://pflugarts.local/wp-content/uploads/2022/02/sample-5s.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="carousel-cell">
-    	<video muted preload="metadata" poster="">>
+    	<video muted preload="metadata" poster="">
 			<source src="<?php echo $video_file; ?>" type="video/mp4">
 			Your browser does not support the video tag.
         </video>
+        <div class="background_layer_dark">   <a class="background_href" href="/calendar"><h3>Slider 1 Content</h3></a></div>
+     
     </div>
+    <div class="carousel-cell">
+    <video muted preload="metadata" poster="">
+			<source src="http://pflugarts.local/wp-content/uploads/2022/02/sample-5s.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+        </video>
+        <div class="background_layer_dark">   <a class="background_href" href="/calendar"><h3>Slider 2 Content</h3></a></div>
+    </div>  
+    <div class="carousel-cell">
+        <video muted preload="metadata" poster="">
+			<source src="/wp-content/uploads/2022/02/small.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+        </video>
+        <div class="background_layer_dark">   <a class="background_href" href="/calendar"><h3>Slider 3 Content</h3></a></div>
+
+    </div>
+
+
     </div>
     
-        <div class="background_layer_dark"></div>
+   
+   
         <div data-aos="fade-down" data-aos-duration="1000" class=" col-md-9 justify-content-center h1-container">
         <h1 class="center-txt mb-3"><?php the_title(); ?></h1>
         <a href="<?php echo get_field('subheading_url'); ?>">

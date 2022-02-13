@@ -6,45 +6,50 @@ $container_spacing: 0px;
     left:0;
     height: 100%;
     width: 100%;
-    pointer-events:none;
-    
     .background_layer_dark{
         opacity: 0.75;
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
-		height: $height;
+        height: $height;
+        z-index:0;
 		background-color: #05050585;
 		box-shadow: 5px 5px 5px grey;
     } 
     .video-container{
         height:$height;
-        background-size:cover;
-        background-position: center;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
         video{
-            display:none;
+            object-fit: cover;
+            display:block;
+            width: 100%;
+            height: $height;
+            position:absolute;
         }
-    
         .h1-container{
+            position: absolute;
             text-align: center;
             margin:0em 1em 0em;
             border-radius: $border-radius;
             @media(max-width:768px){
-                padding-top:12em;
+                padding-top:18em;
             } 
                      
             h1{
                 color:white;
                 text-shadow:2px 2px 5px black;
+                font-size:2em;
+                margin-bottom:0px !important; 
             }
             .inner-container{
                 justify-content:center;
-                padding-top:1em;
-    
+                padding:1em 0.5em 0em;
+                align-items: center;
                 i{
                     margin-left:5%;
                     font-size:24px;
@@ -52,7 +57,7 @@ $container_spacing: 0px;
                 }
                 .left,.right{
                     margin:0;
-                    padding:1em;
+                    padding:0.5em;
                     font-weight: 400;
                     color:$logo-blue;
                 }
@@ -84,22 +89,13 @@ $container_spacing: 0px;
                 margin-top:105px; 
             }
             .video-container{
-                background-image:none;
-            video{
-                display:block;
-                width: 100%;
-                height: $height;
-                position:absolute;
-                object-fit: cover;
-            }
             .h1-container{
-                position: absolute;
+    
                 margin:0em;
                 bottom:$container_spacing;
            
                 .inner-container{
                     justify-content:space-between;
-                    align-items: center;
                     padding:0em;
                     h4{
                         padding:1em;
@@ -107,6 +103,7 @@ $container_spacing: 0px;
                     }
                     .left,.right{
                         min-height:100px;
+                        padding:1em;
                     }
                     .left{
                         border-radius:8px 0px 0px 8px;
