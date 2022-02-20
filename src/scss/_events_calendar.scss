@@ -13,7 +13,8 @@
 				align-items: center;
 				padding: 8em 4px 3em;
 				position: relative;
-
+				background-position: center;
+				background-size:cover;
 				&_box {
 					border-radius: $border-radius;
 
@@ -72,8 +73,5 @@
 }
 
 
-.tribe-events {
-	&-c-search__button {
-		// background-color:#4D57D6 !important;
-	}
-}
+.single-tribe_events .tribe-events-before-html .events-header,.content-row {display:none !important;}
+

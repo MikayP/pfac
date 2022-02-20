@@ -31,18 +31,43 @@ button{
   .z-index{
     position:relative;
     .slider-header{
+      opacity:0;
+      transition:all 2s ease-in-out;
       position: absolute;
-      top:400px;
+      top:350px;
       display: block;
       width: 100%;
-      left:15%;
+      left:0;
+      pointer-events:visible;
       h1,h2{
         color:white;
+        text-shadow: 2px 2px black;
+        display:flex;
+        align-items: center;
+        justify-content: center;
       }
       @include md-screen{
-        bottom:15%;
+        top:450px;
+        bottom:0;
+      }
+      i{
+        font-size:32px;
+        margin-left:16px;
+        padding-top:10px;
+        transition:$menu_transition;
+      }
+      &:hover{
+        i{
+          margin-left:32px;
+        }
+
+      }
       }
     }
+    &.is-selected{
+      .slider-header{
+        opacity:1;
+      }
   }
 
 
