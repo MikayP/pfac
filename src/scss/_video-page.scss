@@ -1,5 +1,5 @@
 $height: 90vh;
-$container_spacing: 0px; 
+$container_spacing: 25px; 
 .video-template{
     position: absolute;
     top: 0;
@@ -36,9 +36,7 @@ $container_spacing: 0px;
             text-align: center;
             margin:0em 1em 0em;
             border-radius: $border-radius;
-            @media(max-width:768px){
-                bottom:50px;
-            } 
+            bottom:0px;
                      
             h1{
                 color:white;
@@ -68,9 +66,10 @@ $container_spacing: 0px;
                 .right{
                     background-color:#1c1b20;
                     border-radius:0px 0px 8px 8px;
-                    font-size:20;
                     justify-content: center;
                     align-items: center;
+                    display:flex;
+                    font-size:24px;
                 }
             }
 
@@ -81,15 +80,14 @@ $container_spacing: 0px;
         margin-top:0px;
     }
     &-content{
-        margin-top:50px; 
+        margin-top:70px; 
     }
         @include md-screen{
             &-content{
-                margin-top:105px; 
+                margin-top:70px; 
             }
             .video-container{
             .h1-container{
-    
                 margin:0em;
                 bottom:$container_spacing;
            

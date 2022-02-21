@@ -4,7 +4,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name=viewport content="width=device-width, initial-scale=1" content="noindex, nofollow">
-    <title><?php bloginfo( 'name' ); ?></title>
+    <title><?php echo get_the_title($post->ID); ?></title>
     <?php wp_head() ?>
     <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>

@@ -34,11 +34,17 @@ button{
       opacity:0;
       transition:all 2s ease-in-out;
       position: absolute;
-      top:350px;
+      top:220px;
       display: block;
+      height:50vh;
       width: 100%;
       left:0;
       pointer-events:visible;
+      @include md-screen{
+        top:450px;
+        bottom:0;
+        height:auto; 
+      }
       h1,h2{
         color:white;
         text-shadow: 2px 2px black;
@@ -46,10 +52,7 @@ button{
         align-items: center;
         justify-content: center;
       }
-      @include md-screen{
-        top:450px;
-        bottom:0;
-      }
+
       i{
         font-size:32px;
         margin-left:16px;
