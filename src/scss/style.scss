@@ -15,7 +15,7 @@ $logo-yellow:#FFE300;
 $logo-blue:#359BCA;
 $primary-font: 'glacial-indifference', serif;
 $menu_transition:all .4s ease-in-out;
-
+$box-shadow:5px 5px 5px grey;;
 
 @font-face {
     font-family: glacial-indifference;
@@ -54,6 +54,7 @@ $menu_transition:all .4s ease-in-out;
 @import "events_calendar";
 @import "social_icons";
 @import "single";
+@import "membership";
 /* Basic Styles */
 
 :root{

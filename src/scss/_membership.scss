@@ -1,0 +1,18 @@
+.swpm-button-wrapper input[type="submit"]{
+    width:100% !important;  
+    border-radius: $border-radius;
+    cursor:pointer;
+    padding:16px;
+    background-color: #359BCA;
+    border:2px solid#145C7D;
+    color:white;
+    font-size:32px;
+    text-shadow:2px 1px 5px black;
+    font-family: $primary-font;
+    box-shadow:$box-shadow;
+    transition:$menu_transition;
+    &:hover{
+        background-color:$logo-red;
+        border:2px solid #9E0D0D;
+    }
+}
