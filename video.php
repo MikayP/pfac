@@ -33,8 +33,14 @@ $sub_header = get_field('subheading');
         </video>
         <div class="background_layer_dark"> </div>  
         <div class="z-index">
-        <a class="mb-3 slider-header" href="<?php echo $link_1 ?>"><h1 ><?php echo $slider_text_1 ?> <i class="fas fa-arrow-right"></i></h1></a>
-        </div>
+        <a class=" slider-header" href="<?php echo $link_1 ?>"><h1 ><?php echo $slider_text_1 ?> <i class="fas fa-arrow-right"></i></h1></a>
+        <svg class="arrows">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+    </div>
+    
     </div>
     <div class="carousel-cell">
     <video muted preload="metadata" poster="">
@@ -43,9 +49,15 @@ $sub_header = get_field('subheading');
         </video>
         <div class="background_layer_dark"> </div>  
         <div class="z-index">
-        <a class="mb-3 slider-header" href="<?php echo $link_2 ?>"> <h2 ><?php echo $slider_text_2 ?> <i class="fas fa-arrow-right"></i></h2> </a>
-</div>
+        <a class=" slider-header" href="<?php echo $link_2 ?>"> <h2 ><?php echo $slider_text_2 ?> <i class="fas fa-arrow-right"></i></h2> </a>
+        <svg class="arrows">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+    </div>
     </div>  
+    <h5 class="has-text-align-center">The Pflugerville Arts Council Board of Directors is made up of:</h5> <p class="has-text-align-center">Melissa Call, President</p> <p class="has-text-align-center">Darelle White, Vice President</p> <p class="has-text-align-center">Derrick Miller, Treasurer</p> <p class="has-text-align-center">A.K. Brewer</p> <p class="has-text-align-center">Joseph Choi</p> <p class="has-text-align-center">Daniela Holloway</p>
     <div class="carousel-cell">
         <video muted preload="metadata" poster="">
 			<source src="<?php echo $video_file_url_3; ?>" type="video/mp4">
@@ -53,13 +65,18 @@ $sub_header = get_field('subheading');
         </video>
         <div class="background_layer_dark"> </div>  
         <div class="z-index">
-        <a class="mb-3 slider-header" href="<?php echo $link_3 ?>"><h2  ><?php echo $slider_text_3 ?> <i class="fas fa-arrow-right"></i></h2></a>
-        </div>
+        <a class=" slider-header" href="<?php echo $link_3 ?>"><h2  ><?php echo $slider_text_3 ?> <i class="fas fa-arrow-right"></i></h2></a>
+        <svg class="arrows">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+    </div>
     </div>
 
 
     </div>
-
+<!-- 
    
    
         <div class=" col-md-9 justify-content-center h1-container">
@@ -70,7 +87,7 @@ $sub_header = get_field('subheading');
           
             </div>
             </a>
-            </div>
+            </div> -->
         </div>
    
         <div class="video-template-content col-md-10 mx-auto ">

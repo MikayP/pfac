@@ -28,23 +28,29 @@ button{
 }
 
 .carousel-cell{
+
   .z-index{
-    position:relative;
+    bottom:0;
+    position: absolute;
+    height:auto; 
+    width: 100%;
+    left:0;
+    top:35vh;
+    @include md-screen{
+
+      top:70vh;
+    }
     .slider-header{
       opacity:0;
       transition:all 2s ease-in-out;
-      position: absolute;
-      top:220px;
+      padding-bottom:2rem;
+      // top:220px;
       display: block;
-      height:50vh;
-      width: 100%;
-      left:0;
+      // height:50vh;
+
+
       pointer-events:visible;
-      @include md-screen{
-        top:450px;
-        bottom:0;
-        height:auto; 
-      }
+
       h1,h2{
         color:white;
         text-shadow: 2px 2px black;
@@ -76,4 +82,51 @@ button{
 
 }
 
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #fff;
+	fill: transparent;
+	stroke-width:2px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
 }

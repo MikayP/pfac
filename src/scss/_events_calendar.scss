@@ -8,9 +8,9 @@
 			margin: 2em -352px 1em;
 
 			&_top_container {
-				min-height: 50vh;
-				display: flex;
-				align-items: center;
+				min-height: 60vh;
+		// display: flex;
+				// align-items: center;
 				padding: 8em 4px 3em;
 				position: relative;
 				background-position: center;
@@ -22,7 +22,18 @@
 						max-width: 95vw;
 					}
 				}
+				.h1-container{
+					margin:0;
+					position:absolute;
+					bottom:0;
+					opacity: 0.75;
+					position: absolute;
+					left: 0;
+					width: 100%;
 
+					z-index:0;
+					background-color: #05050585;
+					box-shadow: 5px 5px 5px grey;
 				h1 {
 
 					padding-top: 16px;
@@ -35,7 +46,7 @@
                         
                     }
                 }
-                
+			}
                 // @keyframes fadeInLeft {
                 //   from {
                 //     opacity: 0;

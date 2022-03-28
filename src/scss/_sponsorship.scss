@@ -1,9 +1,14 @@
+.page-template-sponsorship{
+
+ h2{
+    color:#eb2626da;
+ }   
 .swpm-button-wrapper input[type="submit"]{
     width:100% !important;  
     border-radius: $border-radius;
     cursor:pointer;
     padding:16px;
-    background-color: #359BCA;
+    background-color: #359bcacb;
     border:2px solid#145C7D;
     color:white;
     font-size:32px;
@@ -12,7 +17,10 @@
     box-shadow:$box-shadow;
     transition:$menu_transition;
     &:hover{
-        background-color:$logo-red;
-        border:2px solid #9E0D0D;
+        background-color:#eb2626da;
+        border:2px solid #9e0d0de7;
     }
 }
+
+}
+

@@ -1,4 +1,4 @@
-$height: 90vh;
+$height: 100vh;
 $container_spacing: 25px; 
 .video-template{
     position: absolute;
@@ -19,7 +19,6 @@ $container_spacing: 25px;
     } 
     .video-container{
         height:$height;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,13 +78,13 @@ $container_spacing: 25px;
     .tribe-common{
         margin-top:0px;
     }
-    &-content{
-        margin-top:70px; 
-    }
+    // &-content{
+    //     margin-top:70px; 
+    // }
         @include md-screen{
-            &-content{
-                margin-top:70px; 
-            }
+            // &-content{
+            //     margin-top:70px; 
+            // }
             .video-container{
             .h1-container{
                 margin:0em;
