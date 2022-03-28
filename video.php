@@ -57,7 +57,7 @@ $sub_header = get_field('subheading');
 						</svg>
     </div>
     </div>  
-    <h5 class="has-text-align-center">The Pflugerville Arts Council Board of Directors is made up of:</h5> <p class="has-text-align-center">Melissa Call, President</p> <p class="has-text-align-center">Darelle White, Vice President</p> <p class="has-text-align-center">Derrick Miller, Treasurer</p> <p class="has-text-align-center">A.K. Brewer</p> <p class="has-text-align-center">Joseph Choi</p> <p class="has-text-align-center">Daniela Holloway</p>
+    
     <div class="carousel-cell">
         <video muted preload="metadata" poster="">
 			<source src="<?php echo $video_file_url_3; ?>" type="video/mp4">
