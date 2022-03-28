@@ -16,7 +16,7 @@ function ns_register_footer_widget() {
 add_action( 'widgets_init', 'ns_register_footer_widget' );
 function custom__theme_css() {
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap' );
-	wp_enqueue_style( 'style', get_stylesheet_uri() . '?v=1.12' );
+	wp_enqueue_style( 'style', get_stylesheet_uri() . '?v=1.13' );
 	// wp_enqueue_style( 'animate', '/wp-content/themes/pfac/src/animate.css/animate.min.css' );
 	wp_enqueue_style( 'aos-css', '/wp-content/themes/pfac/src/aos-master/dist/aos.css' );
 }
