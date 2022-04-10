@@ -17,16 +17,23 @@
   //   button{
   //       z-index:2;
   //   }
-  .flickity-page-dots{
-    display:none;
-}
-button{
-    display:none;
-}
+//   .flickity-page-dots{
+//     display:none;
+// }
+// button{
+//     display:none;
+// }
 .flickity-viewport{
   pointer-events: none;
 }
-
+.flickity-button{
+  background-color:transparent;
+  padding:0px;
+  color:white;
+  &:focus{
+    box-shadow:none;
+  }
+}
 .carousel-cell{
 
   .z-index{
@@ -35,7 +42,7 @@ button{
     height:auto; 
     width: 100%;
     left:0;
-    top:35vh;
+    top:65vh;
     @include md-screen{
 
       top:70vh;

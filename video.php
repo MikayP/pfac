@@ -22,7 +22,7 @@ $slider_text_3 = get_field('slider_text_3');
 $sub_header = get_field('subheading');
 
 ?>
-<div class="video-template">
+<div class="video-template left-padding-wrapper">
 	<div class="video-container" >
     <div class="carousel" id="flickity" data-flickity='{ "draggable": false }'>
    

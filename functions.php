@@ -4,7 +4,7 @@ function ns_register_footer_widget() {
 
 	register_sidebar(
 		array(
-			'before_widget' => '<footer class="site-footer">',
+			'before_widget' => '<footer class="site-footer center-txt left-padding-wrapper">',
 			'after_widget'  => '</footer>',			
 			'name'        => __( 'Footer-Widget', 'pfacarts' ),
 			'id'          => 'footer-widget',
@@ -14,6 +14,21 @@ function ns_register_footer_widget() {
 }
 
 add_action( 'widgets_init', 'ns_register_footer_widget' );
+
+// function ns_register_social_widget() {
+
+// 	register_sidebar(
+// 		array(
+// 			'before_widget' => '<div class="social-widget">',
+// 			'after_widget'  => '</div>',			
+// 			'name'        => __( 'Social-Widget', 'pfacarts' ),
+// 			'id'          => 'social-widget',
+// 			'description' => __( 'This is the widget area for social media.', 'pfacarts' ),
+// 		)
+// 	);
+// }
+
+// add_action( 'widgets_init', 'ns_register_social_widget' );
 function custom__theme_css() {
 	wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() . '?v=1.13' );

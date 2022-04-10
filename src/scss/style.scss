@@ -208,49 +208,54 @@ textarea{
 }
 
 .desktop-nav{
-    padding-top:2px;
-    padding-bottom:2px;
-    position:fixed;
-    background-color:rgba(255, 255, 255, 0.76);
-    transition:$menu_transition;
-    z-index:5;
-    .container{
-        padding-right:27px;
-        padding-left:27px;
+    .image-container,.navigation-menu,.menu-social-icon{
+        display:none;
     }
-    .image-container{
-       width:125px;
-           
+        @include lg-screen{
+            .image-container,.navigation-menu,.menu-social-icon{
+                display:block;
+            }
+        display:flex;
+        position:fixed;
+        background-color:#fff;
+        box-shadow:0px 0px 20px -10px rgb(0 0 0 / 70%);
         transition:$menu_transition;
+        z-index:5;
+        height:100vh;
+        padding:1em;
+        width:300px;
+        } 
+
+    .image-container{
         img{
-            width:125px;
+            // width:125px;
             // transform: scale(1);
-            transition:$menu_transition;
+            // transition:$menu_transition;
+ 
             display:flex;
-            margin:auto;
+            justify-content: center;
         }
      }
 
     .navigation-menu{
-        display: none;
-        @include lg-screen {
-            display: block;
-        }
+    
         .menu-menu-container{
             list-style: none;
             margin: 0px;
             padding: 0px;
             .menu{
                 display:flex;
+                // flex-direction:column;
+                flex-wrap:wrap;
                 padding:3px;
-                margin: 10px 0;
+                justify-content:center ;
+                margin: 2em 0;
                 li{
                     list-style:none;
                     a{
-                        padding:5px;
-                        margin:0 12px;
+                        margin:6px 12px;
                         color: black;
-                        font-size:18px;
+                        font-size:24px;
                         letter-spacing:1px;
                         font-weight:800;
                         transition:$menu_transition;
@@ -261,7 +266,7 @@ textarea{
                 }
             }
             .menu-item{
-                margin: 0px 15px;
+                margin: 10px 15px;
                 display: inline-block;
                 a{
                     color: $color-3;
@@ -269,7 +274,7 @@ textarea{
                 }
             }
         }
-    
+ 
     }
 
 }
@@ -291,6 +296,7 @@ textarea{
     }
 }
 .mobile-nav{
+    flex-direction:column;
     width: 100vw;
     height: 100vh;
     opacity: 0.98;
@@ -301,11 +307,19 @@ textarea{
     top: 0px;
     left: 0px;
     z-index: 4;
-    padding-top:10em;
+    padding-top:2em;
+    img{
+        height:200px;
+        width:auto;
+        padding:1em;
+        background-color:rgba(128, 128, 128, 0.562);
+        border-radius: $border-radius;
+    }
     &.open{
         transform: translateX(0px);
     }
     .menu-menu-container{
+        text-align: center;
         list-style: none;
         margin: 0px;
         padding: 0px;
@@ -330,11 +344,13 @@ textarea{
 #burger-nav {
     width: 50px;
     height: 20px;
-    position: relative;
+    position: fixed;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
     z-index: 999;
+    top:3em;
+    left:1em;
     @include lg-screen{
         display: none;
     }
@@ -413,5 +429,22 @@ textarea{
     p{
         font-size:14px;
         color:white;
+    }
+}
+
+.menu-social-icon{
+    background-color:rgba(128, 128, 128, 0.562);
+    font-size:1.2em;
+    padding:10px 16px;
+    border-radius:$border-radius;
+    margin:0 auto;
+    max-width:100px;
+    i{
+        color:black;
+    }
+}
+@include lg-screen{
+    .left-padding-wrapper{
+        padding-left:300px;
     }
 }

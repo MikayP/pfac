@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero cetner-txt d-flex align-items-center justify-content-center">
+<div class=" left-padding-wrapper hero center-txt d-flex align-items-center justify-content-center">
     <div class="row">
         <div class="col-12">
             <h1>404 Oops!</h1>
@@ -11,3 +11,6 @@
 </div>
 
 <?php get_footer(); ?>
+
+
+
