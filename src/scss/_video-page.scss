@@ -18,6 +18,7 @@ $container_spacing: 25px;
 		box-shadow: 5px 5px 5px grey;
     } 
     .video-container{
+        box-shadow:3px 3px 5px grey;
         height:$height;
         display: flex;
         justify-content: center;
@@ -75,9 +76,9 @@ $container_spacing: 25px;
         } 
    
     }
-    .tribe-common{
-        margin-top:0px;
-    }
+    // .tribe-common{
+    //     margin-top:0px;
+    // }
     // &-content{
     //     margin-top:70px; 
     // }

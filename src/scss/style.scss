@@ -206,14 +206,23 @@ textarea{
         height: 100%;
     }
 }
+.sponsor-wrapper{
 
+    img{
+        max-width:95px;
+        height:auto;
+    }
+}
 .desktop-nav{
     .image-container,.navigation-menu,.menu-social-icon{
         display:none;
     }
         @include lg-screen{
-            .image-container,.navigation-menu,.menu-social-icon{
+            .image-container,.navigation-menu{
                 display:block;
+            }
+            .menu-social-icon{
+                display:inline;
             }
         display:flex;
         position:fixed;
@@ -231,7 +240,9 @@ textarea{
             // width:125px;
             // transform: scale(1);
             // transition:$menu_transition;
- 
+            max-height:140px;
+            width:auto;
+            margin:auto;
             display:flex;
             justify-content: center;
         }
@@ -249,7 +260,7 @@ textarea{
                 flex-wrap:wrap;
                 padding:3px;
                 justify-content:center ;
-                margin: 2em 0;
+                margin: 0.5em 1rem 2rem;
                 li{
                     list-style:none;
                     a{
@@ -433,14 +444,22 @@ textarea{
 }
 
 .menu-social-icon{
-    background-color:rgba(128, 128, 128, 0.562);
     font-size:1.2em;
     padding:10px 16px;
     border-radius:$border-radius;
     margin:0 auto;
     max-width:100px;
+    background-color:$logo-blue;
+    color:white;
+    transition: $menu_transition;
+    border:2px solid transparent;
+    box-shadow:3px 3px 5px rgba(128, 128, 128, 0.644);
+    &:hover{
+      box-shadow:3px 3px 5px grey;
+      border:2px solid rgba(0, 0, 0, 0.445);
+    }
     i{
-        color:black;
+        color:white;
     }
 }
 @include lg-screen{

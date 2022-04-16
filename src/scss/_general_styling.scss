@@ -43,8 +43,6 @@
    
 }
 
-.ajust-padding{
-  padding:0px !important;
   .wp-block-latest-posts__list{
     margin-top:8px;
     padding-top:12px;
@@ -53,9 +51,11 @@
         color:$logo-blue;
         display:block;
         transition:$menu_transition;
+
     }
     li {
         padding:6px 11px 6px;
+        border-radius: $border-radius;
         transition:$menu_transition;
         &:hover{
            background-color: rgba(0,0,0,.705);
@@ -67,18 +67,18 @@
       
 }
 }
-}
+
 
 
 // events list block
 
 .tribe-events-view--widget-events-list{
-    margin-bottom:0px !important;
+    margin:1.5rem 0  !important;
+
     .tribe-events-widget-events-list{
 
         h2, span,a,time {
             font-family:glacial-indifference !important;
-            color:white !important;
             letter-spacing:1px;
         }
         h2{
@@ -89,10 +89,10 @@
     }
        a{
         font-size:17px;
-        &:hover{
-            outline-color:white !important;
-            border-bottom-color:white !important;
-        }
+        // &:hover{
+        //     outline-color:white !important;
+        //     border-bottom-color:white !important;
+        // }
        } 
     }
 }
@@ -143,3 +143,40 @@
       margin: 30px;
     }
   }
+
+    .credit{
+      color:grey;
+      font-size:12px;
+    }
+    .parallax{
+      height:200px;
+      background-size: cover;
+    background-position: center;
+    
+  /*  this is where the magic happens:  */
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    @include md-screen{
+      margin:0 -14%;
+    }
+    }
+  
+
+    .wp-bootstrap-blocks-button{
+      text-align:center;
+      margin:1.5rem auto 2.5rem;
+      a{
+        border-radius: $border-radius;
+        padding:12px 48px;
+        background-color:$logo-blue;
+        color:white;
+        transition: $menu_transition;
+        border:2px solid transparent;
+        box-shadow:3px 3px 5px rgba(128, 128, 128, 0.644);
+        &:hover{
+          box-shadow:3px 3px 5px grey;
+          border:2px solid rgba(0, 0, 0, 0.445);
+        }
+
+      }
+    }
