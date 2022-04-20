@@ -4,7 +4,7 @@ function ns_register_footer_widget() {
 
 	register_sidebar(
 		array(
-			'before_widget' => '<footer class="site-footer center-txt">',
+			'before_widget' => '<footer class="site-footer center-txt left-padding-wrapper">',
 			'after_widget'  => '</footer>',			
 			'name'        => __( 'Footer-Widget', 'pfacarts' ),
 			'id'          => 'footer-widget',

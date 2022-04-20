@@ -15,11 +15,6 @@
             <a class="image-container center-txt" href="/">
                 <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo">
             </a>
-            <div class="sponsor-wrapper mt-4">
-            <a href="https://alliance-transportation.com/"><img src="/wp-content/uploads/2022/04/ATG-logo.png"></a>
-            <a href="https://www.pfchamber.com/list/member/greenview-development-austin-134"><img src="/wp-content/uploads/2022/04/Greenview-Development-Barth-Timmermann.jpg"></a>
-            <a href="https://www.txfb-ins.com/"><img src="/wp-content/uploads/2022/04/Texas-Farm-Bureau-Ins.jpg"></a>
-            </div>
   
             <nav class="navigation-menu">
                 <?php $args = [ 'theme_location' => 'primary' ];

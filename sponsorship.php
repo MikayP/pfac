@@ -16,7 +16,7 @@ while ( have_posts() ) : the_post(); ?>
 		$theTitleExplode = explode(' ' ,trim($theTitle)); 
 		$theTitleImplode = implode('-',$theTitleExplode); ?>
 <main id="post-<?php echo $theTitleImplode; ?>" class="post left-padding-wrapper"  data-aos="fade-up" data-aos-duration="1000"  data-aos-delay="1500">
-	<div class="container single-post_container">
+	<div class="container single-post_container ">
 		<?php the_content(); ?>
 	</div>
 </main>

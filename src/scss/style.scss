@@ -55,6 +55,7 @@ $box-shadow:5px 5px 5px grey;;
 @import "social_icons";
 @import "single";
 @import "sponsorship";
+@import "donor";
 /* Basic Styles */
 
 :root{
@@ -434,12 +435,12 @@ textarea{
 }
 .site-footer{
     background-color:$logo-blue;
-    padding:12px 3em;
     margin-top:2em;
      
     p{
         font-size:14px;
         color:white;
+        padding:16px;
     }
 }
 
