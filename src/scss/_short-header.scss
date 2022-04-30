@@ -9,20 +9,27 @@ position:relative;
 				background-position: center;
 				background-size:cover;
 				.h1-container{
+					padding:8px;
 					margin:0;
 					position:absolute;
 					bottom:0;
 					opacity: 0.75;
-					position: absolute;
+					display:flex;
+					flex-direction: column;
+					text-align: center;
 					left: 0;
 					width: 100%;
-
 					z-index:0;
 					background-color: #05050585;
 					box-shadow: 5px 5px 5px grey;
-					h1 {
-
+					h1,p{		
 						color: white;
+					}
+					p{
+						font-size:14px;
+					}
+					h1 {
+						margin:0;
 						font-weight: 700;
 						animation: fadeInLeft 1500ms ease-in-out;
 						@media(max-width:768px){

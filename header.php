@@ -20,8 +20,8 @@
                 <?php $args = [ 'theme_location' => 'primary' ];
                 wp_nav_menu( $args ) ?>
             </nav>
-            <a class="menu-social-icon" href="https://www.facebook.com/groups/PflugervilleArts/"><i class="fab fa-facebook-f"></i></a>
-            <a class="menu-social-icon" href="https://www.instagram.com/pflugervilleartscouncil/"><i class="fab fa-instagram"></i></a>
+            <a class="menu-social-icon" target="_blank" href="https://www.facebook.com/groups/PflugervilleArts/"><i class="fab fa-facebook-f"></i></a>
+            <a class="menu-social-icon" target="_blank" href="https://www.instagram.com/pflugervilleartscouncil/"><i class="fab fa-instagram"></i></a>
             <div id="burger-nav" role="button" aria-label="Open navigation">
                 <span></span>
                 <span></span>

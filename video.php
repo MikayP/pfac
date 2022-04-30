@@ -21,6 +21,10 @@ $slider_text_3 = get_field('slider_text_3');
 
 $sub_header = get_field('subheading');
 
+$artist_credit_1 = get_field('artist_credit_1');
+$artist_credit_2 = get_field('artist_credit_2');
+$artist_credit_3 = get_field('artist_credit_3');
+
 ?>
 <div class="video-template ">
 	<div class="video-container left-padding-wrapper" >
@@ -31,6 +35,8 @@ $sub_header = get_field('subheading');
 			<source src="<?php echo $video_file_url_1; ?>" type="video/mp4">
 			Your browser does not support the video tag.
         </video>
+        <?php if( $artist_credit_1)?>
+         <p class="video-credit"><?php {echo the_field('artist_credit_1') ;}?> </p>
         <div class="background_layer_dark"> </div>  
         <div class="z-index">
         <a class=" slider-header" href="<?php echo $link_1 ?>"><h1 ><?php echo $slider_text_1 ?> <i class="fas fa-arrow-right"></i></h1></a>

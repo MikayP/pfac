@@ -85,8 +85,20 @@
         opacity:1;
       }
   }
-
-
+  .video-credit{
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:100%;
+    text-align:right;
+    color:white;
+    z-index: 2;
+    font-size:16px;
+    @include md-screen{
+      right:167px;
+    }
+  }
+ 
 }
 .flickity-page-dots{display:none;}
 .arrows {
