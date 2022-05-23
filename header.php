@@ -13,7 +13,7 @@
     <div class="center-txt">
 
             <a class="image-container center-txt" href="/">
-                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo">
+                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/05/Transparent-PfAC-Logo-1.png'); ?> " alt="logo">
             </a>
   
             <nav class="navigation-menu">
@@ -34,12 +34,15 @@
 <nav class="mobile-nav d-flex
 justify-content-center ">
 <a class="image-container center-txt" href="/">
-                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/01/Transparent-PfAC-Logo-Text.png'); ?> " alt="logo">
+                <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/05/Transparent-PfAC-Logo-1.png'); ?> " alt="logo">
             </a>
+        
 <?php $primary = [ 'theme_location' => 'primary' ];
         wp_nav_menu( $primary ) ?>
+            <div class="center-txt">
                     <a class="menu-social-icon" href="https://www.facebook.com/groups/PflugervilleArts/"><i class="fab fa-facebook-f"></i></a>
                     <a class="menu-social-icon" href="https://www.instagram.com/pflugervilleartscouncil/"><i class="fab fa-instagram"></i></a>
+                    </div>
 </nav>
  
 <body <?php body_class(); ?>>

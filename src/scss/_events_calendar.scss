@@ -15,25 +15,34 @@
 				position: relative;
 				background-position: center;
 				background-size:cover;
+				@include lg-screen{
+					max-width: calc(100vw - 290px);
+				}
 				&_box {
-					border-radius: $border-radius;
-
 					@media(max-width:786px) {
 						max-width: 95vw;
 					}
 				}
 				.h1-container{
+					padding:8px;
 					margin:0;
 					position:absolute;
 					bottom:0;
 					opacity: 0.75;
-					position: absolute;
+					display:flex;
+					flex-direction: column;
+					text-align: center;
 					left: 0;
 					width: 100%;
-
 					z-index:0;
 					background-color: #05050585;
 					box-shadow: 5px 5px 5px grey;
+					h1,p{		
+						color: white;
+					}
+					p{
+						font-size:14px; 
+					}
 				h1 {
 
 					padding-top: 16px;

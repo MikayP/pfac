@@ -35,7 +35,11 @@ function custom__theme_css() {
 	// wp_enqueue_style( 'animate', '/wp-content/themes/pfac/src/animate.css/animate.min.css' );
 	wp_enqueue_style( 'aos-css', '/wp-content/themes/pfac/src/aos-master/dist/aos.css' );
 }
- 
+the_posts_pagination( array(
+	'mid_size' => 2,
+	'prev_text' => __( 'Previous Page', 'textdomain' ),
+	'next_text' => __( 'Next Page', 'textdomain' ),
+	) );
 function custom__theme_js() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/bb3d3bd63e.js' );

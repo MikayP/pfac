@@ -321,10 +321,10 @@ textarea{
     z-index: 4;
     padding-top:2em;
     img{
-        height:200px;
+        height:160px;
         width:auto;
         padding:1em;
-        background-color:rgba(128, 128, 128, 0.562);
+        background-color:rgba(201, 200, 200, 0.562);
         border-radius: $border-radius;
     }
     &.open{
@@ -342,7 +342,7 @@ textarea{
                 a{
                     color: #fff;
                     font-weight: 400;
-                    font-size:2em;
+                    font-size:1.2em;
                 }
             }
         }
@@ -465,6 +465,6 @@ textarea{
 }
 @include lg-screen{
     .left-padding-wrapper{
-        padding-left:300px;
+        padding-left:300px !important;
     }
 }

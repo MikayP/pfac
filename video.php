@@ -82,18 +82,7 @@ $artist_credit_3 = get_field('artist_credit_3');
 
 
     </div>
-<!-- 
-   
-   
-        <div class=" col-md-9 justify-content-center h1-container">
-       
-        <a href="<?php echo get_field('subheading_url'); ?>">
-           <div class="inner-container row">
-                <h4 class="col-md-6 left"><?php echo $sub_header; ?></h4> <h4 class="col-md-6 right"> <?php echo get_field('right_subheader_text'); ?><i class="fas fa-arrow-right"></i> </h4>
-          
-            </div>
-            </a>
-            </div> -->
+
         </div>
    
         <div class="video-template-content left-padding-wrapper col-md-10 mx-auto ">
