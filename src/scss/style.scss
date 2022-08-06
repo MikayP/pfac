@@ -215,6 +215,7 @@ textarea{
     }
 }
 .desktop-nav{
+    overflow-y:scroll;
     .image-container,.navigation-menu,.menu-social-icon{
         display:none;
     }
@@ -250,22 +251,40 @@ textarea{
      }
 
     .navigation-menu{
-    
+    .menu-item-has-children{
+        // a:nth-child(1):after{
+        //         content: '\25ba';
+        //         padding-left: 0.5em;
+        // }
+        .sub-menu{
+            padding-left:10px;
+            display:none;
+            a{
+                font-size:20px;
+            }
+            li:last-child{
+                margin-bottom: 0px;
+            }
+        }
+        &:hover{
+            .sub-menu{
+                display:flex;
+                flex-direction: column;
+            }
+        }
+    }
         .menu-menu-container{
             list-style: none;
             margin: 0px;
             padding: 0px;
             .menu{
                 display:flex;
-                // flex-direction:column;
-                flex-wrap:wrap;
                 padding:3px;
-                justify-content:center ;
-                margin: 0.5em 1rem 2rem;
+                flex-direction: column;
+                margin: 0.5em 1rem 2rem 0rem;
                 li{
                     list-style:none;
                     a{
-                        margin:6px 12px;
                         color: black;
                         font-size:24px;
                         letter-spacing:1px;
@@ -312,19 +331,19 @@ textarea{
     width: 100vw;
     height: 100vh;
     opacity: 0.98;
-    background-color: #050505;
+    background-color: #fff;
     transform: translateX(-100vw);
     transition: all 450ms ease-in-out;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 4;
-    padding-top:2em;
+    padding-top:0em;
+    justify-content:space-evenly;
     img{
         height:160px;
         width:auto;
-        padding:1em;
-        background-color:rgba(201, 200, 200, 0.562);
+        padding:1em 1em 0em;
         border-radius: $border-radius;
     }
     &.open{
@@ -340,8 +359,8 @@ textarea{
             li{
                 margin:15px;
                 a{
-                    color: #fff;
-                    font-weight: 400;
+                    color: black;
+                    font-weight: 600;
                     font-size:1.2em;
                 }
             }
@@ -448,7 +467,7 @@ textarea{
     font-size:1.2em;
     padding:10px 16px;
     border-radius:$border-radius;
-    margin:0 auto;
+    margin:0 10px;
     max-width:100px;
     background-color:$logo-blue;
     color:white;

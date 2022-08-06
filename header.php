@@ -10,7 +10,7 @@
 </head>
 
 <header  class="justify-content-center  container-fluid desktop-nav ">
-    <div class="center-txt">
+    <div class="centetxtr-">
 
             <a class="image-container center-txt" href="/">
                 <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/05/Transparent-PfAC-Logo-1.png'); ?> " alt="logo">
@@ -20,8 +20,11 @@
                 <?php $args = [ 'theme_location' => 'primary' ];
                 wp_nav_menu( $args ) ?>
             </nav>
+            <div class="d-flex justify-content-center">
             <a class="menu-social-icon" target="_blank" href="https://www.facebook.com/groups/PflugervilleArts/"><i class="fab fa-facebook-f"></i></a>
             <a class="menu-social-icon" target="_blank" href="https://www.instagram.com/pflugervilleartscouncil/"><i class="fab fa-instagram"></i></a>
+            </div>
+          
             <div id="burger-nav" role="button" aria-label="Open navigation">
                 <span></span>
                 <span></span>
@@ -31,15 +34,14 @@
         </div>
     </div>
 </header>
-<nav class="mobile-nav d-flex
-justify-content-center ">
+<nav class="mobile-nav d-flex">
 <a class="image-container center-txt" href="/">
                 <img src="<?php echo  esc_url( $uploads['baseurl'] . '/2022/05/Transparent-PfAC-Logo-1.png'); ?> " alt="logo">
             </a>
         
 <?php $primary = [ 'theme_location' => 'primary' ];
         wp_nav_menu( $primary ) ?>
-            <div class="center-txt">
+            <div class="center-txt p-4">
                     <a class="menu-social-icon" href="https://www.facebook.com/groups/PflugervilleArts/"><i class="fab fa-facebook-f"></i></a>
                     <a class="menu-social-icon" href="https://www.instagram.com/pflugervilleartscouncil/"><i class="fab fa-instagram"></i></a>
                     </div>
